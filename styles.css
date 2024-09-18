@@ -1,0 +1,205 @@
+:root{
+    /* COLOR */
+    --primary-color-hue: 252;
+    --primary-white-lightness: 100%;
+    --primary-light-lightness: 95%;
+    --primary-dark-lightness: 17%;
+    
+    --color-white: hsl(252, 30%, var(--primary-white-lightness));
+    --color-light: hsl(252, 30%, var(--primary-light-lightness));
+    --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+    --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, var(--primary-dark-lightness));
+    --color-black: hsl(252, 30%, 10%);
+
+    /* borderRadius */
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    /* STICKY */
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+
+
+    
+}
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: 0;
+    list-style: none;
+}
+body {
+    font-family: "Lato", sans-serif;
+    /* background-color: rgb(2, 0, 27); */
+}
+nav {
+    background: #000000;
+    padding: 20px 50px;
+    color: white;
+}
+.nav_top {
+    display: flex;
+    /* background-color: yellow; */
+    align-items: center;
+    justify-content: space-between;
+}
+.search {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.search_input {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+}
+.search_input::placeholder {
+    color: lightgrey;
+}
+.limited_offer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+.nav_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+/* NAV ENDS */
+
+/* SLIDER */
+.slider {
+    background: url('./img/pexels-photo-4252891.jpeg') no-repeat center center/cover;
+    /* clip-path: polygon(31% 100%, 100% 65%, 99% 0%, 0 0, 0% 100%); */
+    overflow: hidden;
+}
+.sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1000ms ease-in-out;
+}
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+.sliderImage {
+    z-index: 1;
+    margin-left: 393px;
+    height: 500px;
+    /* background: url("./img/sole1.png"); */
+}
+
+.sliderbg {
+    width: 750px;
+    height: 750px;
+    background-color: rgb(96, 97, 67);
+    border-radius: 50%;
+    position: absolute;
+    left: 18%;
+    top: 15px;
+}
+.sliderTitle {
+    position: absolute;
+    top: 10%;
+    color: rgb(255, 255, 255);
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    z-index: 1;
+}
+.sliderPrice {
+    position: absolute;
+    top: 10%;
+    color: rgb(255, 255, 255);
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid gray;
+    z-index: 1;
+}
+.buyButton {
+    position: absolute;
+    top: 59%;
+    color: rgb(255, 255, 255);
+    right: 12%;
+    font-size: 30px;
+    font-weight: 900;
+    border: 1px solid gray;
+    background-color: black;
+    z-index: 1;
+    cursor: pointer;
+}
+.buyButton:hover {
+    background-color: white;
+    color: #000000;
+    border: 1px solid rgb(0, 0, 0);
+}
+/* slider-color */
+.sliderItem:nth-child(1) .sliderbg {
+    background-color: rgb(252, 252, 27);
+}
+.sliderItem:nth-child(2) .sliderbg {
+    background-color: rgb(255, 164, 164);
+}
+.sliderItem:nth-child(3) .sliderbg {
+    background-color: rgb(107, 105, 9);
+}
+.sliderItem:nth-child(4) .sliderbg {
+    background-color: rgb(255, 186, 129);
+}
+.sliderItem:nth-child(5) .sliderbg {
+    background-color: rgb(21, 199, 125);
+}
+/* slider-PRICE-color */
+.sliderItem:nth-child(1) .sliderPrice {
+    color: rgb(107, 107, 9);
+}
+.sliderItem:nth-child(2) .sliderPrice {
+    color: rgb(9, 55, 107);
+}
+.sliderItem:nth-child(3) .sliderPrice {
+   color: rgb(107, 9, 58);
+}
+.sliderItem:nth-child(4) .sliderPrice {
+    color: rgb(255, 255, 255);
+}
+.sliderItem:nth-child(5) .sliderPrice {
+    color: rgb(21, 199, 125);
+}
+/* FEATURES */
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+.featureImg {
+    height: 15px;
+    width: 30px;
+}
